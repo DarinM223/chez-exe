@@ -35,7 +35,7 @@ stubs.o: stubs.c
 	$(CC) -c -o $@ $<
 
 %.o: %.c
-	$(CC) -c -o $@ $< -I$(incdir) -Wall -Wextra -pedantic $(CFLAGS)
+	$(CC) -c -o $@ $< -I$(incdir) -Wall -Wextra -pedantic -fPIE -lm $(CFLAGS)
 
 %_boot.o: %_boot.c
 	$(CC) -o $@ -c $(CFLAGS) $<
