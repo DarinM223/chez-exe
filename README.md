@@ -121,3 +121,12 @@ For example:
 will also link against the OpenGL libraries, allowing the scheme source to
 access the shared libraries by calling `(load-shared-object #f)` instead of
 loading each object file individually.
+
+To build with Ubuntu, run this command:
+
+```
+scheme --script gen-config.ss --prefix /usr/local/ --bindir /usr/local/bin   --libdir /usr/local/lib --bootpath /usr/lib/csv10.4.1/ta6le
+```
+
+where `csv10.4.1` is the version of Chez Scheme installed.
+
